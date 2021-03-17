@@ -1,41 +1,21 @@
-export function ListDefault() {
+import { ListDefaultItem }  from './ListDefaultItem';
+
+const repository = {
+  title: 'React',
+  description: 'Form in React',
+  link: 'https://github.com/'
+}
+
+export function ListDefault(props) {
   return (
     <section>
-      <h1>Lista de Repositórios</h1>
+      <h1>{props.title}</h1>
 
       <ul>
-        <li>
-          <strong>unform</strong>
-          <p>Form in React</p>
-
-          <a href={'/'}>
-            Acessar repositório
-          </a>
-        </li>
-        <li>
-          <strong>unform</strong>
-          <p>Form in React</p>
-
-          <a href={'/'}>
-            Acessar repositório
-          </a>
-        </li>
-        <li>
-          <strong>unform</strong>
-          <p>Form in React</p>
-
-          <a href={'/'}>
-            Acessar repositório
-          </a>
-        </li>
-        <li>
-          <strong>unform</strong>
-          <p>Form in React</p>
-
-          <a href={'/'}>
-            Acessar repositório
-          </a>
-        </li>
+        <ListDefaultItem repository={repository} />
+        <ListDefaultItem repository={repository}/>
+        <ListDefaultItem repository={repository}/>
+        <ListDefaultItem repository={repository}/>
       </ul>
     </section>
   )

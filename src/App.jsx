@@ -4,7 +4,7 @@ import { ListDefault } from './components/ListDefault';
 export function App() {
   return (
     <>
-     <ListDefault/>
+     <ListDefault title={'Lista de Repositórios'}/>
     </>
   )
 }
