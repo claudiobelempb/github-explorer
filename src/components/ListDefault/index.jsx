@@ -8,7 +8,7 @@ const repository = {
 
 export function ListDefault(props) {
   return (
-    <section>
+    <section className={'repository-list'}>
       <h1>{props.title}</h1>
 
       <ul>
