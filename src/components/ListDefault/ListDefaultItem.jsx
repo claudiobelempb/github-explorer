@@ -5,6 +5,7 @@ export function ListDefaultItem(props) {
   return (
     <>
       <li>
+          <p>ID: {props.repository.id}</p>
           <strong>{props.repository.name}</strong>
           <p>{props.repository.description}</p>
 
