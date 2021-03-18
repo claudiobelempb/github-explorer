@@ -2,12 +2,6 @@ import { useState, useEffect } from 'react';
 
 import { ListDefaultItem }  from './ListDefaultItem';
 
-const repository = {
-  title: 'React',
-  description: 'Form in React',
-  link: 'https://github.com/'
-}
-
 export function ListDefault(props) {
 
   const [repositories, setRepositories] = useState([]);
@@ -25,10 +19,9 @@ export function ListDefault(props) {
       <h1>{props.title}</h1>
 
       <ul>
-        <ListDefaultItem repository={repository} />
-        <ListDefaultItem repository={repository}/>
-        <ListDefaultItem repository={repository}/>
-        <ListDefaultItem repository={repository}/>
+        {repositories.map(repository => {
+          return <ListDefaultItem key={repository.id} repository={repository}/>
+        })}
       </ul>
     </section>
   )
