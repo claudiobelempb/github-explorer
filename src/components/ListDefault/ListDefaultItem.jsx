@@ -1,7 +1,7 @@
 import '../ListDefault/ListDefault.scss';
-const repositoryName = 'unform2';
 
 export function ListDefaultItem(props) {
+
   return (
     <>
       <li>
