@@ -1,6 +1,15 @@
 import '../ListDefault/ListDefault.scss';
 
-export function ListDefaultItem(props) {
+interface IRepositoryItemProps {
+  repository: {
+    id: string;
+    name: string;
+    description: string;
+    html_url: string;
+  }
+}
+
+export function ListDefaultItem( props: IRepositoryItemProps) {
 
   return (
     <>

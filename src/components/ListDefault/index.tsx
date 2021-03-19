@@ -2,9 +2,17 @@ import { useState, useEffect } from 'react';
 
 import { ListDefaultItem }  from './ListDefaultItem';
 
-export function ListDefault(props) {
+interface IRepository {
+  title: string;
+  id: string;
+  name: string;
+  description: string;
+  html_url: string;
+}
 
-  const [repositories, setRepositories] = useState([]);
+export function ListDefault() {
+
+  const [repositories, setRepositories] = useState<IRepository[]>([]);
 
   useEffect(() => {
     fetch('https://api.github.com/orgs/rocketseat/repos')
@@ -16,7 +24,7 @@ export function ListDefault(props) {
 
   return (
     <section className={'repository-list'}>
-      <h1>{props.title}</h1>
+      <h1>Lista de Repositórios</h1>
 
       <ul>
         {repositories.map(repository => {
